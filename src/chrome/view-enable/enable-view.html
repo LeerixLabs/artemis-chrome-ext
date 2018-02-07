@@ -1,0 +1,19 @@
+<div ng-controller="enableCtrl" class="view">
+	<div class="view__header">
+		<div class="view__header__title">
+			<div class="view__header__title--primary">{{::model.uiStrings.titlePrimary}}</div>
+			<div class="view__header__title--secondary">{{::model.uiStrings.titleSecondary}}</div>
+		</div>
+	</div>
+	<div class="view__content">
+		<div class="view__content__scroll-container">
+			<div class="artemis__logo-panel height--100 text-align--center">
+				<div ng-click="showDebugUI()" class="artemis-activate-debug-panel"></div>
+				<img src="../artemis/artemis-logo.png" class="artemis-logo"/>
+			</div>
+		</div>
+	</div>
+	<div class="view__footer">
+		<button ng-click="enable()" title="{{::model.uiStrings.enableButtonTooltip}}">{{::model.uiStrings.enableButtonText}}</button>
+	</div>
+</div>

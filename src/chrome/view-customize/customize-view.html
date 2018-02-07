@@ -1,0 +1,19 @@
+<div ng-controller="customizeCtrl" class="view">
+	<div class="view__header">
+		<div class="view__header__title">
+			<div class="view__header__title--primary">{{::model.uiStrings.titlePrimary}}</div>
+			<div class="view__header__title--secondary">{{::model.uiStrings.titleSecondary}}</div>
+		</div>
+	</div>
+	<div class="view__content">
+		<div class="view__content__scroll-container">
+			<div class="artemis-settings-panel">
+				<textarea ng-model="model.settingsJson" class="height--100 width--100"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="view__footer">
+		<button ng-click="reset()" ng-class="{'disabled': !canReset()}" title="{{::model.uiStrings.resetButtonTooltip}}">{{::model.uiStrings.resetButtonText}}</button>
+		<button ng-click="update()" ng-class="{'disabled': !canUpdate()}" title="{{::model.uiStrings.updateButtonTooltip}}">{{::model.uiStrings.updateButtonText}}</button>
+	</div>
+</div>

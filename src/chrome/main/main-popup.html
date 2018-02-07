@@ -1,0 +1,53 @@
+<html ng-app="mainApp">
+<head>
+    <title>ALM Octane Extension</title>
+    <link rel="stylesheet" type="text/css" href="main-style.css">
+    <script src="../lib/angular/angular.min.js"></script>
+    <script src="main-ctrl.js"></script>
+    <script src="../common/common-storage.js"></script>
+    <script src="../artemis/artemis-settings-default.js"></script>
+    <script src="../common/common-functions.js"></script>
+    <script src="../view-enable/enable-view.js"></script>
+    <script src="../view-learn/learn-view.js"></script>
+    <script src="../view-try/try-view.js"></script>
+    <script src="../view-customize/customize-view.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+<div class="height--100 flex flex-direction--column">
+    <div class="header flex--0 flex align-items--center">
+        <img src="../img/48.png" class="header__logo-image flex--0"/>
+        <span class="header__title flex--1">{{::model.title}}</span>
+        <button ng-click="onCloseClick()" class="header__close-button flex--0">X</button>
+    </div>
+    <div class="flex--1 margin-t--md relative">
+        <div class="absolute-stretch">
+            <div class="height--100 flex">
+                <div class="flex--0 height--100 border-r padding-r--md">
+                    <div ng-repeat="tab in model.tabs track by $index" ng-click="onTabClick(tab.id)" class="tabs__item"
+                         ng-class="{active: tab.id === model.activeTabId}">
+                        <div class="white-space--pre">{{::tab.title}}</div>
+                    </div>
+                </div>
+                <div class="flex--1 height--100 margin-l--md relative">
+                    <div class="absolute-stretch">
+                        <div ng-if="model.activeTabId === 'enable'" class="view-container height--100">
+                            <enable-view/>
+                        </div>
+                        <div ng-if="model.activeTabId === 'learn'" class="view-container height--100">
+                            <learn-view/>
+                        </div>
+                        <div ng-if="model.activeTabId === 'try'" class="view-container height--100">
+                            <try-view/>
+                        </div>
+                        <div ng-if="model.activeTabId === 'customize'" class="view-container height--100">
+                            <customize-view/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

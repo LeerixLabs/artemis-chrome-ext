@@ -1,0 +1,49 @@
+.connect__details-panel__line {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+.connect__details-panel__label {
+    display: inline-block;
+    position: relative;
+    flex: 0 0 auto;
+    align-self: baseline;
+    width: 80px;
+    height: 22px;
+    font-size: 16px;
+    color: #666;
+    margin-left: 15px;
+}
+
+.connect__details-panel__input {
+    flex: 0 0 auto;
+    margin: 0 0 0 5px;
+    height: 22px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    padding: 0 5px;
+}
+
+.connect__details-panel__url-input {
+    flex: 1 1 auto;
+}
+
+.connect__details-panel__username-input {
+}
+
+.connect__details-panel__password-input {
+}
+
+.connect__details-panel__login-status {
+    font-size: 16px;
+}
+
+.connect__details-panel__login-status.success {
+    color: #090;
+}
+
+.connect__details-panel__login-status.failure {
+    color: #c00;
+}

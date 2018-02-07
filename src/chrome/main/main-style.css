@@ -1,0 +1,417 @@
+@font-face {
+	font-family: "MetricWeb-Thin";
+	src: url('../fonts/MetricWeb-Thin.woff') format('woff');
+}
+@font-face {
+	font-family: "MetricWeb-Light";
+	src: url('../fonts/MetricWeb-Light.woff') format('woff');
+}
+@font-face {
+	font-family: "MetricWeb-Regular";
+	src: url('../fonts/MetricWeb-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: "MetricWeb-Medium";
+	src: url('../fonts/MetricWeb-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: "MetricWeb-Semiboldr";
+	src: url('../fonts/MetricWeb-Semibold.woff') format('woff');
+}
+@font-face {
+	font-family: "MetricWeb-Bold";
+	src: url('../fonts/MetricWeb-Bold.woff') format('woff');;
+}
+@font-face {
+	font-family: "MetricWeb-Black";
+	src: url('../fonts/MetricWeb-Black.woff') format('woff');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: MetricWeb-Regular, arial, sans-serif;
+	font-size: 15px;
+}
+
+body {
+	font-family: MetricWeb-Regular, arial, sans-serif;
+	font-size: 15px;
+	background-color: #fff;
+	color: #555;
+	width: 600px;
+	max-width: 600px;
+	height: 370px;
+	max-height: 370px;
+	overflow: hidden;
+}
+
+button {
+	height: 25px;
+	width: 80px;
+	color: #555;
+	border: 1px solid #999;
+	background-color: #fff;
+	outline: none !important;
+	font-family: MetricWeb-Regular, arial, sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+button.small {
+	width: 40px;
+}
+
+button.large {
+	width: 120px;
+}
+
+button.extra-large {
+	width: 160px;
+}
+
+button:hover,
+button:focus {
+	color: #555;
+	border: 1px solid #666;
+	cursor: pointer;
+}
+
+button:active {
+	color: #fff;
+	background-color: #444;
+	border: 1px solid #444;
+}
+
+button.disabled.disabled {
+	color: #ccc;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	cursor: default;
+	pointer-events: none;
+}
+
+input {
+	outline: none;
+	font-family: MetricWeb-Regular, arial, sans-serif;
+	font-size: 15px;
+	text-indent: 5px;
+	height: 25px;
+}
+
+textarea {
+	outline: none;
+	background-color: #444;
+	color: #fff;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 12px;
+	line-height: 14px;
+	overflow-y: scroll;
+}
+
+.required-field::before {
+	content: "";
+	background-color: #ca2f2f;
+	position: absolute;
+	top: 12px;
+	left: -10px;
+	width: 5px;
+	height: 5px;
+}
+
+.height--100 {
+	height: 100%;
+}
+
+.width--100 {
+	width: 100%;
+}
+
+.none {
+	display: none;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-direction--column {
+	flex-direction: column;
+}
+
+.align-items--center {
+	align-items: center;
+}
+
+.flex--0 {
+	flex: 0 0 auto;
+}
+
+.flex--1 {
+	flex: 1 1 auto;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute-stretch {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.overflow--auto {
+	overflow: auto;
+}
+
+.overflow--scroll {
+	overflow: scroll;
+}
+
+.overflow--hidden {
+	overflow: hidden;
+}
+
+.margin--sm {
+	margin: 5px;
+}
+
+.margin-t--md {
+	margin-top: 10px;
+}
+
+.margin-r--md {
+	margin-right: 10px;
+}
+
+.margin-b--md {
+	margin-bottom: 10px;
+}
+
+.margin-l--md {
+	margin-left: 10px;
+}
+
+.margin-v--md {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.padding--sm {
+	padding: 5px;
+}
+
+.padding-t--md {
+	padding-top: 10px;
+}
+
+.padding-r--md {
+	padding-right: 10px;
+}
+
+.padding-b--md {
+	padding-bottom: 10px;
+}
+
+.padding-l--md {
+	padding-left: 10px;
+}
+
+.border-r {
+	border-right: 1px solid #ddd;
+}
+
+.white-space--pre {
+	white-space: pre;
+}
+
+.text-align--center {
+	text-align: center;
+}
+
+.header {
+	background-color: #eee;
+	height: 50px;
+}
+
+.header__logo-image {
+	margin: 10px 15px;
+	width: 30px;
+	height: 30px;
+}
+
+.header__title {
+	font-size: 20px;
+}
+
+.header__close-button {
+	width: 50px;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.header__close-button:hover,
+.header__close-button:focus,
+.header__close-button:active {
+	border: none;
+	background-color: #c00;
+	color: #fff;
+}
+
+.tabs__item {
+	border-left: 6px solid #ddd;
+	padding: 15px;
+	margin-bottom: 10px;
+	color: #aaa;
+	cursor: pointer;
+	transition: 0.3s linear all;
+}
+
+.tabs__item.active {
+	border-left: 6px solid #555;
+	color: #555;
+	cursor: default;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.view-container {
+	animation: fade-in 0.6s;
+}
+
+.view {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+}
+
+.view__header {
+	flex: 0 0 auto;
+	display: flex;
+}
+
+.view__header__title--primary {
+	font-size: 18px;
+}
+
+.view__header__title--secondary {
+	font-size: 14px;
+	color: #999;
+}
+
+.view__content {
+	flex: 1 1 auto;
+	position: relative;
+	margin-top: 10px;
+	border-top: 1px solid #ddd;
+}
+
+.view__content__scroll-container {
+	margin-top: 10px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.view__footer {
+	flex: 0 0 auto;
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+	margin-top: 10px;
+}
+
+.view__footer > button {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.view__footer_mc {
+	flex: 0 0 auto;
+	display: flex;
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+	margin-top: 10px;
+}
+
+.buttons_mc {
+	margin-left: auto;
+	margin-top: auto;
+}
+
+.artemis-logo {
+	height: 150px;
+	margin-top: 25px;
+}
+
+.docs-panel {
+	overflow: auto;
+	border: 1px solid #ddd;
+	background-color: #fafafa;
+	padding: 10px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body h1 > a,
+.markdown-body h2 > a,
+.markdown-body h3 > a {
+	display: none;
+}
+
+.markdown-body > *:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+
+.markdown-body .highlight pre, .markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	border-radius: 3px;
+	background-color: #444;
+	color: #fff;
+}
+
+

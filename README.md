@@ -1,2 +1,2 @@
-# octane-nlt-chrome-ext
-Predictive Analytics Natural Language Testing
+# artemis-chrome-ext
+Artemis Chrome Ext

@@ -1,0 +1,32 @@
+<div ng-controller="connectCtrl" class="view">
+    <div class="view__header">
+        <div class="view__header__title">
+            <div class="view__header__title--primary">{{::model.uiStrings.titlePrimary}}</div>
+            <div class="view__header__title--secondary">{{::model.uiStrings.titleSecondary}}</div>
+        </div>
+    </div>
+    <div class="view__content">
+        <div class="view__content__scroll-container">
+            <div class="connect__details-panel alm-web-ui-login-container">
+                <div class="connect__details-panel__line">
+                    <label class="required-field connect__details-panel__label">{{model.uiStrings.octaneUrlLabel}}</label>
+                    <input type="text" ng-model="model.octaneURL" class="connect__details-panel__input connect__details-panel__url-input" placeholder="{{model.uiStrings.octaneUrlPlaceholder}}"/>
+                </div>
+                <div class="connect__details-panel__line">
+                    <label class="required-field connect__details-panel__label">{{model.uiStrings.usernameLabel}}</label>
+                    <input type="text" ng-model="model.usernameInput" class="connect__details-panel__input connect__details-panel__username-input" placeholder="{{model.uiStrings.usernamePlaceholder}}"/>
+                </div>
+                <div class="connect__details-panel__line">
+                    <label class="required-field connect__details-panel__label">{{model.uiStrings.passwordLabel}}</label>
+                    <input type="password" ng-model="model.passwordInput" class="connect__details-panel__input connect__details-panel__password-input" placeholder="{{model.uiStrings.passwordPlaceholder}}"/>
+                </div>
+                <div class="connect__details-panel__line">
+                    <div class="connect__details-panel__login-status" ng-class="{'success': model.loginSucceeded, 'failure': !model.loginSucceeded}">{{model.loginStatus}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="view__footer">
+        <button ng-click="onLoginClick()" ng-class="{'disabled': !canLogin()}" class="default">Login</button>
+    </div>
+</div>

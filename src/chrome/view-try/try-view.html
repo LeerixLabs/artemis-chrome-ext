@@ -1,0 +1,16 @@
+<div ng-controller="tryCtrl" class="view">
+	<div class="view__header">
+		<div class="view__header__title">
+			<div class="view__header__title--primary">{{::model.uiStrings.titlePrimary}}</div>
+			<div class="view__header__title--secondary">{{::model.uiStrings.titleSecondary}}</div>
+		</div>
+	</div>
+	<div class="view__content">
+		<div class="view__content__scroll-container">
+			<input ng-model="model.sentence" class="width--100"/>
+		</div>
+	</div>
+	<div class="view__footer">
+		<button ng-click="run()" ng-class="{'disabled': !canRun()}" title="{{::model.uiStrings.runButtonTooltip}}">{{::model.uiStrings.runButtonText}}</button>
+	</div>
+</div>
