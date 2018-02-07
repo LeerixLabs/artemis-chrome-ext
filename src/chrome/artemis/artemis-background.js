@@ -36,12 +36,10 @@
 				chrome.browserAction.setBadgeBackgroundColor({color: '#AAAAAA'});
 			} else if (request.msg === '1') {
 				chrome.browserAction.setBadgeText({text: '1'});
-				//chrome.browserAction.setBadgeBackgroundColor({color: '#33AA33'});
-				chrome.browserAction.setBadgeBackgroundColor({color: '#0079EF'});
+				chrome.browserAction.setBadgeBackgroundColor({color: '#669966'});
 			} else {
 				chrome.browserAction.setBadgeText({text: request.msg});
-				//chrome.browserAction.setBadgeBackgroundColor({color: '#FF3300'});
-				chrome.browserAction.setBadgeBackgroundColor({color: '#F48B34'});
+				chrome.browserAction.setBadgeBackgroundColor({color: '#BB7766'});
             }
         }
     });
