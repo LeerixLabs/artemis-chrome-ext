@@ -11,6 +11,7 @@
 		</div>
 	</div>
 	<div class="view__footer">
+		<button ng-click="find()" ng-class="{'disabled': !canFind()}" title="{{::model.uiStrings.findButtonTooltip}}">{{::model.uiStrings.findButtonText}}</button>
 		<button ng-click="run()" ng-class="{'disabled': !canRun()}" title="{{::model.uiStrings.runButtonTooltip}}">{{::model.uiStrings.runButtonText}}</button>
 	</div>
 </div>
