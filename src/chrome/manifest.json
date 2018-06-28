@@ -5,12 +5,11 @@
   "description": "Artemis",
   "version": "0.0.1",
   "browser_action": {
-    "default_icon": "img/48.png",
+    "default_icon": "img/128.png",
     "default_popup": "main/main-popup.html",
     "default_title": "Artemis"
   },
   "icons": {
-    "48": "img/48.png",
     "128": "img/128.png"
   },
   "permissions": [
