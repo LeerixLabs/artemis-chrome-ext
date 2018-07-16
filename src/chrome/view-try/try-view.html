@@ -7,7 +7,7 @@
 	</div>
 	<div class="view__content">
 		<div class="view__content__scroll-container">
-			<input ng-model="model.sentence" class="width--100"/>
+			<input ng-model="model.sentence" ng-change="onChanged()" ng-keypress="onKeyPressed($event)" class="width--100" title="{{::model.uiStrings.sentenceInputTooltip}}"/>
 		</div>
 	</div>
 	<div class="view__footer">
