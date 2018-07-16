@@ -11,7 +11,7 @@ angular.module('mainApp').controller('enableCtrl', function enableCtrl($scope, c
 	$scope.model = {
 		uiStrings: {
 			titlePrimary: 'Enable',
-			titleSecondary: 'Attach the NLT library to the current active browser tab',
+			titleSecondary: 'Attach the Artemis library to the current active browser tab',
 			enableButtonText: 'Enable',
 			enableButtonTooltip: 'Enable for current tab'
 		}

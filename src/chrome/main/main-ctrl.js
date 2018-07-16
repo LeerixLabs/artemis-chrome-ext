@@ -4,7 +4,7 @@ let mainApp = angular.module('mainApp', [], function() {
 angular.module('mainApp').controller('mainCtrl', function mainCtrl($scope, commonStorage) {
 
     $scope.model = {
-        title: 'Predictive Analytics Natural Language Testing',
+        title: 'Artemis Natural Language Web UI Locator',
         tabs: [
 			{title: 'Enable', id: 'enable'},
 			{title: 'Learn', id: 'learn'},

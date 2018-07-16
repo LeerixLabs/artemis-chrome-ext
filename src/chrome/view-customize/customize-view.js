@@ -13,7 +13,7 @@ angular.module('mainApp').controller('customizeCtrl', function customizeCtrl($sc
 		settingsJson: commonFunctions.loadSettings(),
 		uiStrings: {
 			titlePrimary: 'Customize',
-			titleSecondary: 'Update or reset the NLT library settings',
+			titleSecondary: 'Update or reset the Artemis library settings',
 			resetButtonText: 'Reset',
 			resetButtonTooltip: 'Reset settings',
 			updateButtonText: 'Update',

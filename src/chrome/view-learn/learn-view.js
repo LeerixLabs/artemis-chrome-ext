@@ -6,12 +6,12 @@ angular.module('mainApp').directive('learnView', function () {
 	};
 });
 
-angular.module('mainApp').controller('learnCtrl', function tryCtrl($scope, commonFunctions) {
+angular.module('mainApp').controller('learnCtrl', function tryCtrl($scope) {
 
 	$scope.model = {
 		uiStrings: {
 			titlePrimary: 'Learn',
-			titleSecondary: 'Read the documentation about Natural Language Testing'
+			titleSecondary: 'Read the Artemis documentation'
 		}
 	};
 

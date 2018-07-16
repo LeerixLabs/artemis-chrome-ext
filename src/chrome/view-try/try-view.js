@@ -12,7 +12,7 @@ angular.module('mainApp').controller('tryCtrl', function tryCtrl($scope, commonF
 		sentence: 'find link',
 		uiStrings: {
 			titlePrimary: 'Try',
-			titleSecondary: 'Execute a single NLT command on the current active browser tab',
+			titleSecondary: 'Execute a single Artemis command on the current active browser tab',
 			findButtonText: 'Find',
 			findButtonTooltip: 'Find element',
 			runButtonText: 'Run',
