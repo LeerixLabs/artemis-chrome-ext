@@ -19,7 +19,7 @@
     "webpack": "~2.6.1"
   },
   "dependencies": {
-    "angular": "~1.6.2",
+    "angular": "~1.7.9",
     "artemis-core": "latest"
   },
   "scripts": {
